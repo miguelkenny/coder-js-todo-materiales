@@ -1,0 +1,112 @@
+{
+   "products":[
+      {
+         "idCategoria":"1",
+         "id":"101",
+         "nombreCategoria":"Herramientas Electricas",
+         "nombre":"AMOLADORA ANGULAR DEWALT",
+         "stock":"10",
+         "precio":"4500.00",
+         "imagen":"./images/amoladora.jpg"
+      },
+      {
+         "idCategoria":"2",
+         "id":"102",
+         "nombreCategoria":"Accesorios de Pinturas",
+         "nombre":"RODILLO DE LANA EL GALGO 22 CM",
+         "stock":"10",
+         "precio":"1250.00",
+         "imagen":"./images/rodillo.jpg"
+      },
+      {
+         "idCategoria":"1",
+         "id":"103",
+         "nombreCategoria":"Herramientas Electricas",
+         "nombre":"ATORNILLADOR ELECTRICO DEWALT",
+         "stock":"10",
+         "precio":"6500.00",
+         "imagen":"./images/atornillador.jpg"
+      },
+      {
+         "idCategoria":"3",
+         "id":"104",
+         "nombreCategoria":"Pintureria",
+         "nombre":"LATEX INTERIOR ALBA X 20 LT.",
+         "stock":"10",
+         "precio":"4850.00",
+         "imagen":"./images/latex.jpg"
+      },
+      {
+         "idCategoria":"3",
+         "id":"105",
+         "nombreCategoria":"Pintureria",
+         "nombre":"ESMALTE BLANCO ALBALUX X 1 LT.",
+         "stock":"10",
+         "precio":"1085.00",
+         "imagen":"./images/esmalte.jpg"
+      },
+      {
+         "idCategoria":"2",
+         "id":"106",
+         "nombreCategoria":"Accesorios de Pinturas",
+         "nombre":"PINCEL CERDA BLANCA 5 CM.",
+         "stock":"10",
+         "precio":"685.00",
+         "imagen":"./images/pincel.jpg"
+      },
+      {
+         "idCategoria":"1",
+         "id":"107",
+         "nombreCategoria":"Herramientas Electricas",
+         "nombre":"TALADRO ELECTRICO DEWALT",
+         "stock":"10",
+         "precio":"8685.00",
+         "imagen":"./images/taladro.jpg"
+      },
+      {
+         "idCategoria":"1",
+         "id":"108",
+         "nombreCategoria":"Herramientas Electricas",
+         "nombre":"CIERRA CALADORA DEWALT.",
+         "stock":"10",
+         "precio":"7585.00",
+         "imagen":"./images/caladora.jpg"
+      },
+      {
+         "idCategoria":"1",
+         "id":"109",
+         "nombreCategoria":"Herramientas Electricas",
+         "nombre":"AMOLADORA DE BANCO DEWALT.",
+         "stock":"10",
+         "precio":"17585.00",
+         "imagen":"./images/amoladora-banco.jpg"
+      },
+      {
+         "idCategoria":"1",
+         "id":"110",
+         "nombreCategoria":"Herramientas Electricas",
+         "nombre":"MARTILLO DEMOLEDOR DEWALT 10KG.",
+         "stock":"10",
+         "precio":"27585.00",
+         "imagen":"./images/demoledor.jpg"
+      },
+      {
+         "idCategoria":"1",
+         "id":"111",
+         "nombreCategoria":"Herramientas Electricas",
+         "nombre":"FRESADORA DEWALT 900W.",
+         "stock":"10",
+         "precio":"12455.00",
+         "imagen":"./images/fresadora.jpg"
+      },
+      {
+         "idCategoria":"1",
+         "id":"112",
+         "nombreCategoria":"Herramientas Electricas",
+         "nombre":"HIDROLAVADORA DEWALT 150BAR.",
+         "stock":"10",
+         "precio":"18020.00",
+         "imagen":"./images/hidrolavadora.jpg"
+      }
+   ]
+}

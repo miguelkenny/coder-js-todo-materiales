@@ -1,0 +1,28 @@
+{
+    "talleres":[
+       {
+          "idCategoria":"1",
+          "id":"113",
+          "nombreCategoria":"Construccion en Seco",
+          "nombre":"CURSO PRESENCIAL DE CONSTRUCCION EN SECO",
+          "precio":"$0.00",
+          "imagen":"https://www.perfilesjma.com.ar/wp-content/uploads/2020/06/construccion-en-seco-1-800x800.jpg"
+       },
+       {
+          "idCategoria":"1",
+          "id":"114",
+          "nombreCategoria":"Pinturas",
+          "nombre":"TALLER PRESENCIAL PARA PINTAR INTERIORES",
+          "precio":"$0.00",
+          "imagen":"https://facilityvenezuela.com/wp-content/uploads/2020/11/Servicio-de-Pintura-Facility-Venezuela.jpg"
+       },
+       {
+          "idCategoria":"1",
+          "id":"115",
+          "nombreCategoria":"Carpinteria",
+          "nombre":"TALLER PRESENCIAL DE CARPINTERIA PARA EL HOGAR",
+          "precio":"$0.00",
+          "imagen":"https://www.oroverde.com.ar/web/wp-content/uploads/2019/10/Taller-de-Carpinter%C3%ADa-1.jpg"
+       }
+    ]
+ }

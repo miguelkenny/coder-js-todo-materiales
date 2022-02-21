@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans&family=Staatliches&display=swap');
+
+:root {
+  --white: #afafaf;
+  --red: #e31b23;
+  --bodyColor: #292a2b;
+  --borderFormEls: hsl(0, 0%, 10%);
+  --bgFormEls: hsl(0, 0%, 14%);
+  --bgFormElsFocus: hsl(0, 7%, 20%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.container{
+  padding: 0 !important; 
+}
+.logo-tienda{
+    border-radius: 50%;
+    margin-right: 15px;
+    width: 80px;
+    height: 80px;
+    box-shadow: 1px -2px 38px -18px rgba(255, 255, 255, 0.68);
+    -webkit-box-shadow: 1px -2px 38px -18px rgba(255, 255, 255, 0.68);
+    -moz-box-shadow: 1px -2px 38px -18px rgba(255, 255, 255, 0.68);
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.form-signin .checkbox {
+    font-weight: 400;
+  }
+  
+  .form-signin .form-floating:focus-within {
+    z-index: 2;
+  }
+  
+  .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+.sidebar{
+    width: 280px;
+    height: 100vh;
+}
+
+.texto-logo{
+  display: none;
+}
+
+#nomUser{
+  display: row; 
+  color: aliceblue;
+}
+.ocultar{
+  display: none;
+}
+
+.mostrar{
+  display: initial;
+}
+
+/* Aside */
+aside{
+  background: rgb(33,37,41);
+  background: linear-gradient(360deg, rgb(59, 59, 59) 0%, rgba(255,166,0,1) 62%, rgba(255,85,0,1) 86%, rgba(251,50,50,1) 100%);
+}
+
+#boton-vaciar, #boton-pagar{
+  -webkit-box-shadow: 4px 5px 36px -1px rgba(0,0,0,0.73); 
+  box-shadow: 4px 5px 36px -1px rgba(0,0,0,0.73);   
+}
+
+.logo-footer{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+/* Estilo Formulario de Contacto */
+.my-form {
+  color:white;
+  background-color: #28282e;
+}
+.aForm {
+  color: inherit;
+}
+
+.inputForm,
+.selectFrom,
+.textareaForm,
+.buttonForm {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+.buttonForm,
+.labelForm {
+  cursor: pointer;
+}
+
+.select-form {
+  appearance: none;
+}
+
+/* Remove native arrow on IE */
+select::-ms-expand {
+  display: none;
+}
+
+/*Remove dotted outline from selected option on Firefox*/
+/*https://stackoverflow.com/questions/3773430/remove-outline-from-select-box-in-ff/18853002#18853002*/
+/*We use !important to override the color set for the select on line 99*/
+select:-moz-focusring {
+  color: transparent !important;
+  text-shadow: 0 0 0 var(--white);
+}
+
+.textareaForm {
+  resize: none;
+}
+
+.ulForm {
+  list-style: none;
+}
+
+.bodyForm {
+  font: 18px/1.5 "Open Sans", sans-serif;
+  background: var(--bodyColor);
+  color: var(--white);
+}
+
+.containerForm {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+
+/* ELEMENTOS DEL FORMULARIO
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.my-form h1 {
+  margin-bottom: 1.5rem;
+}
+
+.my-form li,
+.my-form .grid > *:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.my-form select,
+.my-form input,
+.my-form textarea,
+.my-form button {
+  width: 100%;
+  line-height: 1.5;
+  padding: 15px 10px;
+  border: 1px solid var(--borderFormEls);
+  color: var(--white);
+  background: var(--bgFormEls);
+  transition: background-color 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25),
+    transform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+}
+
+.my-form textarea {
+  height: 170px;
+}
+
+.my-form ::placeholder {
+  color: inherit;
+  /*Fix opacity issue on Firefox*/
+  opacity: 1;
+}
+
+.my-form select:focus,
+.my-form input:focus,
+.my-form textarea:focus,
+.my-form button:enabled:hover,
+.my-form button:focus,
+.my-form input[type="checkbox"]:focus + label {
+  background: var(--bgFormElsFocus);
+}
+
+.my-form select:focus,
+.my-form input:focus,
+.my-form textarea:focus {
+  transform: scale(1.02);
+}
+
+.my-form *:required,
+.my-form select {
+  background-repeat: no-repeat;
+  background-position: center right 12px;
+  background-size: 15px 15px;
+}
+
+.my-form *:required {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/asterisk.svg);  
+}
+
+.my-form select {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/down.svg);
+}
+
+.my-form *:disabled {
+  cursor: default;
+  filter: blur(2px);
+}
+
+
+/* BOTONES DEL FORM
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.my-form .required-msg {
+  display: none;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/asterisk.svg)
+    no-repeat center left / 15px 15px;
+  padding-left: 20px;
+}
+
+.my-form .btn-grid {
+  position: relative;
+  overflow: hidden;
+  transition: filter 0.2s;
+}
+
+.my-form button {
+  font-weight: bold;
+}
+
+.my-form button > * {
+  display: inline-block;
+  width: 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.my-form button .back {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-110%, -50%);
+}
+
+.my-form button:enabled:hover .back,
+.my-form button:focus .back {
+  transform: translate(-50%, -50%);
+}
+
+.my-form button:enabled:hover .front,
+.my-form button:focus .front {
+  transform: translateX(110%);
+}
+
+/* Boton Flotante */
+.btn-flotante {
+	border-radius: 50px; /* Borde del boton */
+	letter-spacing: 2px; /* Espacio entre letras */
+	background-color: #f1edef; /* Color de fondo */
+	padding: 8px 8px; /* Relleno del boton */
+	position: fixed;
+	bottom: 115px;
+	right: 40px;
+	transition: all 300ms ease 0ms;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	
+}
+.btn-flotante:hover {
+	background-color: #28282e; /* Color de fondo al pasar el cursor */
+	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+	transform: translateY(-7px);
+}
+
+/* Estilo para el Modal Carrito */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: .5s ease;
+  z-index: -1;
+}
+
+.overlay.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.modalCarrito {
+  max-height: calc(100% - 100px);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 500px;
+  transform: translate(-50%, -50%);
+  color: #4a5666;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  z-index: 3;
+  visibility: hidden;
+  opacity: 0;
+  transition: .5s ease;
+  border-radius: 5px;
+}
+
+.modalCarrito h2 {
+  margin: 0;
+  font-weight: 400;
+  padding: 1rem;
+  border-bottom: 1px solid #DDE0E7;
+}
+
+.modalCarrito p {
+  padding: 1rem;
+  font-size: 25 px;
+}
+
+.modalCarrito.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.closeCarrito {
+  margin: 0 0 1rem;
+  border: #448f3b;
+  padding: 16px 32px;
+  font-size: 1.2rem;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.closeCarrito:hover {
+  border: 1px solid #448f3b;
+  color: #ffffff;
+  background: transparent;
+}
+
+.bg-talleres{
+  background-image: url(https://www.johnsautotags.com/wp-content/uploads/2013/10/Orange-Background.jpg)
+}
+
+/*------- Media Query --------*/
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+  .logo-tienda{
+    border-radius: 50%;
+    margin-right: 15px;
+    width: 120px;
+    height: 120px;
+    box-shadow: 1px -2px 38px -18px rgba(255, 255, 255, 0.68);
+    -webkit-box-shadow: 1px -2px 38px -18px rgba(255, 255, 255, 0.68);
+    -moz-box-shadow: 1px -2px 38px -18px rgba(255, 255, 255, 0.68);
+  }
+  
+  .texto-logo{
+    display: initial;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    margin-right: 40px;
+  }
+
+  /* FORMULARIO */
+  .my-form .grid {
+    display: grid;
+    grid-gap: 1.5rem;
+  }
+
+  .my-form .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .my-form .grid-3 {
+    grid-template-columns: auto auto auto;
+    align-items: center;
+  }
+
+  .my-form .grid > *:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .my-form .required-msg {
+    display: block;
+  }
+
+  /* BOTON FLOTANTE */
+  .btn-flotante {
+		padding: 5px 5px;
+		bottom: 110px;
+		right: 20px;
+	}
+}

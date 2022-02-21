@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Miguel A. Castro Kenny">
+    <meta name="generator" content="Miguel C. Kenny 0.88.1">
+    <title>Todo Materiales - Todo lo que necesitas para la construccion</title>
+
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/jquery-ui-1.13.1.custom/jquery-ui.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Mi estilo CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./js/jquery-ui-1.13.1.custom/jquery-ui.css">
+    
+  </head>
+
+<body class="expansion-alids-init">    
+  <header>
+    <!-- Menú Cabecera -->
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+      <div class="container-fluid">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="#/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <img src="./images/logo.jpg" class="logo-tienda bi me-2" role="img" aria-label="Bootstrap"></img>
+            <strong class="texto-logo">Todo Materiales</strong>
+          </a>
+        </div>
+        <div>
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#/" class="nav-link px-2 fs-5 text-secondary" id="home">Home</a></li>
+          <li><a href="#/talleres" class="nav-link px-2 fs-5 text-secondary" id="talleres">Talleres Gratuitos</a></li>
+          <li><a href="#/contacto" class="nav-link px-2 fs-5 text-secondary" id="contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+        </div>
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#miModalInicioSesion" id="btnLogin">Iniciar Sesion</button>
+          
+          <button type="button" class="btn btn-danger me-2 ocultar" id="btnCerrarSesion">Cerrar Sesion</button>
+          <img src="./images/user.png" class="ocultar mx-4 me-2" id="logoUser"><p class="ocultar" id="nomUser"></p></img>
+          
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#miModalRegistro" id="miBtnRegistrarse">Registrarse</button>
+        </div> 
+      </div>
+
+      <!-- Modal para Inicio de Sesion y Registro -->
+      <div class="modal fade" id="miModalInicioSesion" aria-hidden="true" aria-labelledby="modalTitle1" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <button type="button" class="mt-2 mx-2 ms-auto btn-close" data-bs-dismiss="modal" id="btnCerrarInicioSesion"></button>
+            <div class="modal-header">
+              <div class="mx-auto d-block">  
+                <img src="./images/logo.jpg" class="logo-tienda" alt="Logo Todo Materiales">
+                <h5 class="mt-2 modal-title" id="modalTitle">Iniciar Sesion</h5>
+              </div>  
+            </div>
+            <div class="modal-body">
+              <form id="formInicioSesion">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Tu Email</label>
+                  <input type="email" class="form-control" id="emailInicioSesion" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico con nadie más..</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="passwordInicioSesion">
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Recuerdame</label>
+                </div>
+                <button type="" class="btn btn-primary" id="btnIngresar" >Ingresar</button> 
+              </form>
+            
+            </div>
+            <div class="modal-footer bg-dark">
+              <label class="form-label text-white">¿Aún no tienes cuenta?</label>
+              <button type="submit" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#miModalRegistro" ib="btnReg">Registrate Aquí</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Registro -->
+      <div class="modal fade" id="miModalRegistro" aria-hidden="true" aria-labelledby="modalTitle2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <button type="button" class="mt-2 mx-2 ms-auto btn-close" id="btnCerrarRegistro" data-bs-dismiss="modal"></button>
+            <div class="d-flex align-items-center modal-header">
+              <div class="mx-auto d-block">  
+                <img src="./images/logo.jpg" class="align-self-center logo-tienda" alt="Logo Todo Materiales">
+                <h5 class="mt-2 modal-title" id="modalTitle">Registrarse Ahora</h5>
+              </div>  
+            </div>
+            <div class="modal-body">
+              <form id="formRegistro">
+                <div class="mb-3">
+                  <label for="exampleInputName1" class="form-label">Ingresa tu Nombre Completo</label>
+                  <input type="text" class="form-control nombreCompleto" id="nombreCompleto" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Ingresa tu Email</label>
+                  <input type="email" class="form-control emailRegistro" id="emailRegistro" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Ingresar domicilio de entrega:</label>
+                  <input type="text" class="form-control domicilio" id="domicilio">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Ingresar Contraseña</label>
+                  <input type="password" class="form-control passwordRegistro" id="passwordRegistro">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Repetir Contraseña</label>
+                  <input type="password" class="form-control passwordConfirmar" id="passwordConfirmar">
+                </div>
+                <button type="submit" class="btn btn-primary" id="btnRegistrar">Registrarse</button>
+              </form>
+              
+            </div>
+            <div class="modal-footer bg-dark">
+              <label class="form-label text-white">¿Ya tienes una cuenta?</label>
+              <button type="submit" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#miModalInicioSesion">Inicia Sesion</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<main class="bg-banner">
+  <!-- Slider -->
+  <section class="text-center container-fluid p-0 slider" id="bannerInicioSesion">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="5000">
+          <img src="./images/banner1.jpg" class="d-block w-100 img-fluid" alt="Todod Materiales - Banner 1">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="./images/banner2.jpg" class="d-block w-100 img-fluid" alt="Todod Materiales - Banner 2">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/banner3.jpg" class="d-block w-100 img-fluid" alt="Todod Materiales - Banner 3">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/banner4.jpg" class="d-block w-100 img-fluid" alt="Todod Materiales - Banner 4">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <div class="album py-4 mt-5 bg-light" id="vistaProductos">
+    <div class="container-fluid">
+      <div class="row">
+        <div id="items" class="col col-md-2 row card-body justify-content-center">
+          
+          <!-- Elementos generados desde DOM -->
+          
+        </div>
+        <aside class="ocultar col-sm-3 rounded-3 my-3 mx-5 border border-4">
+          <h2 class="mx-3 mt-3 text-white">Mi Carrito</h2>
+          <!-- Elementos del carrito -->
+          <ul id="carrito" class="list-group"></ul>
+          <hr>
+          <!-- Precio total -->
+          <p class="text-right mx-3">Total: &dollar;<span id="total"></span></p>
+          <button id="boton-vaciar" class="btn btn-danger ocultar">Carrito Vacío</button>
+          <button id="boton-pagar" class="btn btn-success ocultar" data-bs-target="#modalCheckout">Realizar Compra</button>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <!-- Logo Flotante del Carrito -->
+  <a class="cart_anchor btn-flotante"><img id="logoCarrito" src="./images/carrito.png" alt="logo carrito de compras"><span class="p-2 me-4 position-absolute top-170 translate-middle badge bg-danger" id="badgeCarrito">0</span></a>
+  
+  <!-- Modal Carrito -->
+  <div class="overlay"></div>
+  <div class="modalCarrito text-center">
+    <h2>CheckOut</h2>
+    <p>Confirmar domicilio de entrega => Confirmar Método de pago</p>
+    <button class="closeCarrito bg-success shadow">Compra Exitosa</button>
+</div>
+
+<!------------------------------------------------------------------------------------------->
+<!---------------------------------- VISTA CONTACT FORM ------------------------------------->
+  <div class="pb-4" id="vistaContacto">
+    <div class="container-fluid p-0">
+      <img src="./images/contacto.jpg" class="d-block w-100 img-fluid" alt="...">
+    </div>
+    <form class="my-form p-2">
+      <div class="containerForm">
+        <h1 class="mt-5 text-center">Necesita ayuda? Contáctenos!</h1>
+        <ul class="ulForm">
+          <li>
+            <select class="selectFrom select-form">
+              <option selected disabled>-- Por favor, escoja una opción --</option>
+              <option>Solicitud de cotización</option>
+              <option>Enviar currículum</option>
+              <option>Otro</option>      
+            </select>
+          </li>
+          <li>
+            <div class="grid grid-2">
+              <input class="inputForm" type="text" placeholder="Nombre" required>  
+              <input class="inputForm" type="text" placeholder="Apellido" required>
+            </div>
+          </li>
+          <li>
+            <div class="grid grid-2">
+              <input class="inputForm" type="email" placeholder="Email" required>  
+              <input class="inputForm" type="tel" placeholder="Teléfono">
+            </div>
+          </li>    
+          <li>
+            <textarea class="textare aForm" placeholder="Mensaje"></textarea>
+          </li>   
+          <li>
+            <div class="grid grid-3">
+              <div class="required-msg">CAMPOS REQUERIDOS</div>
+              <button class="buttonForm btn-grid" type="submit">
+                <span class="back">
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/email-icon.svg" alt="">
+                </span>
+                <span class="front">ENVIAR</span>
+              </button>
+              <button class="buttonForm btn-grid" type="reset">
+                <span class="back">
+                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/eraser-icon.svg" alt="">
+                </span>
+                <span class="front">LIMPIAR FORMULARIO</span>
+              </button> 
+            </div>
+          </li>    
+        </ul>
+      </div>
+    </form>
+  </div>
+
+<!-------------------------------------------------------------------------------------------------------------->
+<!---------------------------------------------- VISTA TALLERES GRATUITOS ---------------------------------------------->
+<div id="vistaTalleres">
+  <h1 class="text-center mt-5 display-4"><strong>CALENDARIO DE TALLERES</strong></h1>
+  <h3 class="text-center display-6">Elige el Taller Gratuito que desees tomar, agenda el día y listo!... Te Esperamos!</h3>
+  <div class="row m-3 p-4 d-flex justify-content-around" id="taller">
+    <!-- Acá agregamos las ofertas al DOM desde el offers.json -->
+  </div>
+</div>
+</main>
+
+  <!-- Menú Pié de Página -->
+  <div class="container-fluid bg-dark">
+    <footer class="d-flex justify-content-evenly align-items-center py-3">
+      <p class="col-md-4 ms-3 mb-0 text-muted">© 2022 Todo Materiales.</p>
+
+      <a href="#/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+        <img class="logo-footer shadow-lg border" src="./images/logo.jpg" alt="">
+      </a>
+
+      <ul class="nav col-md-4 justify-content-end">
+        <li class="nav-item"><a href="#/" class="nav-link px-2 fs-5 text-secondary" id="homeF">Home</a></li>
+        <li><a href="#/talleres" class="nav-link px-2 fs-5 text-secondary" id="talleresF">Talleres Gratuitos</a></li>
+        <li class="nav-item mx-4"><a href="#/contacto" class="nav-link fs-5 px-2 text-secondary" id="contactoF">Contacto</a></li>
+      </ul>
+    </footer>
+  </div>
+
+  <!-- Script de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>  
+  
+  <script src="./js/clases.js"></script>
+  <script src="./js/login.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/modalCarrito.js"></script>
+  <script src="./js/volar.js"></script>
+  <script src="./js/spaController.js"></script>
+  <script src="./js/talleres.js"></script>
+
+</body>
+</html>
